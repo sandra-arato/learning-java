@@ -87,6 +87,5 @@ public class Main {
         if (doesNotRemain == false) {
             System.out.println("Got some remainder");
         }
-
     }
 }

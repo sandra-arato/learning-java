@@ -5,6 +5,8 @@
 They are highlighted / bold
 are case sensitive
 
+There are [50+ keywords in Java](https://en.wikipedia.org/wiki/List_of_Java_keywords).
+
 **public** - access modifier - optional for class
 **class** - defines classes 
 
@@ -107,3 +109,9 @@ Strings are immutable
 [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html)
 
 [Operator presedence](http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html)
+
+
+## Methods
+
+Pretty similar to JS.
+
