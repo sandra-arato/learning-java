@@ -115,3 +115,86 @@ Strings are immutable
 
 Pretty similar to JS.
 
+
+
+## Classes
+
+**public** - unrestricted access to the class
+
+**protected** - access within the package
+
+**private** - no access
+
+
+### Fields
+
+- class or member variables > fields
+- usually private
+- capsulation means that we hide the fields or methods from public access
+
+### Constructors
+
+You can set up a constructor by creating a public method on the class: 
+
+```
+public class MyClass {
+    private String prop;
+
+    public MyClass(String prop) {
+        this.prop = prop;
+    }
+}
+```
+
+The fun thing is that you can also create multiple constructors. So a constructor can be set up if the object created does not recieve any props at instatiation, eg. you can use defaults:
+```
+public class MyClass {
+    private String prop;
+
+    public MyClass() {
+        this.prop = "default";
+    }
+}
+```
+
+### Overloading
+
+The 2 methods above is an example for **method overloading** - when you define multiple methods with the same name, but different parameters.
+
+Developers usually refer to overloading as _Compile time polymorphism_. - even though it has nothing to do with it (?).
+The compiler decides during runtime which method will be run.
+
+
+Overloading usually happens in a single class, but can happen in the subclass as well.
+
+Overloaded methods do:
+    - have the same name
+    - have different params
+Overloaded methods may or may not:
+    - have different return types
+    - have different access modifiers
+    - throw different exceptions
+
+### Overriding
+
+Redefining a method in a child-class. It is also known as **runtime polymorphsism** or **dynamic method dispatch** as the decision is made at runtime. 
+
+@Override is an annotation that helps the IDE to highlight issues with the override.
+
+Rules for overrides:
+    - same name and same arguments as parent
+    - return type can be subclass of parent's return type
+    - can't have a lower access modifier than the parent's method
+    - private methods can't be overridden
+    - methods that are final cannot be overridden
+
+### Static vs Instance methods
+
+Methods defined with the `static` keyword are supposed to be used on the class as they are class-specific. In a static method, you don't have access to this. It can't use any fields directly (eg. this.field).
+
+Instance methods belong to an instance of the class. To enable the usage, you have to instantiate the object first in order to use an instance method.
+
+
+### Static vs Instance variables
+
+Static fields of a class are shared within instances, based on the last instantiation. On contrary, instance variables have their own copy on each instance.
