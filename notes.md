@@ -1,6 +1,25 @@
 # Java learning notes
 
-## Java keywords
+Contents
+
+[Keywords](keywords)
+[Variables](variables)
+[Primitive types](primitives)
+[Namespace](namespace)
+[Strings](strings)
+[Operators](operators)
+[Classes](classes)
+    - [Fields](classes-fields)
+    - [Constructors](classes-constructors)
+    - [Overloading](classes-overloading)
+    - [Overriding](classes-overriding)
+    - [Methods](classes-staticmethods)
+    - [Variables](classes-staticvariables)
+[Arrays](arrays)
+[Interfaces](interfaces)
+
+
+## Java keywords<a name="keywords"></a>
 
 They are highlighted / bold
 are case sensitive
@@ -17,13 +36,13 @@ public class Hello {
 ```
 
 
-**static** - keyword for... ?
+**static** - keyword for methods or fields that are tied to the class itself
 
 **void** - method won't return any output
 
 parameters in in defining a method are optional
 
-## Variables
+## Variables<a name="variables"></a>
 
 **int** - integer - whole number data type
 
@@ -34,7 +53,7 @@ string literals cannot be changed... (dah.)
 Java operators perform operations on values or variables
 
 
-## Primitive types
+## Primitive types<a name="primitives"></a>
 
 Java has 8 primitive types
 
@@ -67,7 +86,7 @@ Actually double types are faster on most computers, as processors have been twea
 **boolean** - can only be set to true or false
 
 
-## Namespace
+## Namespace<a name="namespace"></a>
 
 import Test from com.expedia.booking
 ```
@@ -92,7 +111,7 @@ booking
 
 ```
 
-## Strings
+## Strings<a name="strings"></a>
 
 String is a class, not a data type
 is a sequence of characters - that is technically max 2.14Billion character length.
@@ -100,7 +119,7 @@ is a sequence of characters - that is technically max 2.14Billion character leng
 
 Strings are immutable 
 
-## Operators
+## Operators<a name="operators"></a>
 
 `int myVar = 12 * 15` <--- this line is an expression
 
@@ -111,13 +130,7 @@ Strings are immutable
 [Operator presedence](http://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html)
 
 
-## Methods
-
-Pretty similar to JS.
-
-
-
-## Classes
+## Classes<a name="classes"></a>
 
 **public** - unrestricted access to the class
 
@@ -126,13 +139,13 @@ Pretty similar to JS.
 **private** - no access
 
 
-### Fields
+### Fields<a name="classes-fields"></a>
 
 - class or member variables > fields
 - usually private
 - capsulation means that we hide the fields or methods from public access
 
-### Constructors
+### Constructors<a name="classes-constructors"></a>
 
 You can set up a constructor by creating a public method on the class: 
 
@@ -157,7 +170,7 @@ public class MyClass {
 }
 ```
 
-### Overloading
+### Overloading<a name="classes-overloading"></a>
 
 The 2 methods above is an example for **method overloading** - when you define multiple methods with the same name, but different parameters.
 
@@ -175,7 +188,7 @@ Overloaded methods may or may not:
     - have different access modifiers
     - throw different exceptions
 
-### Overriding
+### Overriding<a name="classes-overriding"></a>
 
 Redefining a method in a child-class. It is also known as **runtime polymorphsism** or **dynamic method dispatch** as the decision is made at runtime. 
 
@@ -188,19 +201,19 @@ Rules for overrides:
     - private methods can't be overridden
     - methods that are final cannot be overridden
 
-### Static vs Instance methods
+### Static vs Instance methods<a name="classes-staticmethods"></a>
 
 Methods defined with the `static` keyword are supposed to be used on the class as they are class-specific. In a static method, you don't have access to this. It can't use any fields directly (eg. this.field). Use it like this: `Math.random()`
 
 Instance methods belong to an instance of the class. To enable the usage, you have to instantiate the object first in order to use an instance method. Use it like this: `myDog.bark()`
 
 
-### Static vs Instance variables
+### Static vs Instance variables<a name="classes-staticvariables"></a>
 
 Static fields of a class are shared within instances, based on the last instantiation. On contrary, instance variables have their own copy on each instance.
 
 
-## Arrays and Array Lists
+## Arrays and Array Lists<a name="arrays"></a>
 
 Arrays store reference, so if you make a copy, it'll actually just store the reference to the original object.
 
@@ -217,7 +230,7 @@ Some methods for ArrayList
     - arrayList.size() // -> instead of length
 
 
-## Interfaces, abstracts and inner classes
+## Interfaces, abstracts and inner classes<a name="interfaces"></a>
 
 Static nested class
 NonStatic nested class or inner class
