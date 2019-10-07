@@ -190,11 +190,43 @@ Rules for overrides:
 
 ### Static vs Instance methods
 
-Methods defined with the `static` keyword are supposed to be used on the class as they are class-specific. In a static method, you don't have access to this. It can't use any fields directly (eg. this.field).
+Methods defined with the `static` keyword are supposed to be used on the class as they are class-specific. In a static method, you don't have access to this. It can't use any fields directly (eg. this.field). Use it like this: `Math.random()`
 
-Instance methods belong to an instance of the class. To enable the usage, you have to instantiate the object first in order to use an instance method.
+Instance methods belong to an instance of the class. To enable the usage, you have to instantiate the object first in order to use an instance method. Use it like this: `myDog.bark()`
 
 
 ### Static vs Instance variables
 
 Static fields of a class are shared within instances, based on the last instantiation. On contrary, instance variables have their own copy on each instance.
+
+
+## Arrays and Array Lists
+
+Arrays store reference, so if you make a copy, it'll actually just store the reference to the original object.
+
+List is an interface, array list inherits from list.
+
+**ArrayList** is a resizable array.
+
+Some methods for ArrayList
+    - arrayList.get(index);
+    - arrayList.set(index, value);
+    - arrayList.indexOf(value);
+    - arrayList.contains(value); // boolean
+    - arrayList.remove(index);
+    - arrayList.size() // -> instead of length
+
+
+## Interfaces, abstracts and inner classes
+
+Static nested class
+NonStatic nested class or inner class
+
+**Abstract classes** - define methods but don't implement methods. They can be used to share code between classes.
+
+You can setup non static and non final fields, methods and getters/setters.
+
+**Interface** - declaration of methods on a Class that have to be defined.
+
+Interfaces can use default methods since Java 8. Since Java 9, you can also use private methods in interfaces (for example to share code between 2 default mehtods).
+
