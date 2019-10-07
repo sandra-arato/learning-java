@@ -192,14 +192,14 @@ Overloaded methods may or may not:
 
 Redefining a method in a child-class. It is also known as **runtime polymorphsism** or **dynamic method dispatch** as the decision is made at runtime. 
 
-@Override is an annotation that helps the IDE to highlight issues with the override.
+`@Override` is an annotation that helps the IDE to highlight issues with the override.
 
 Rules for overrides:
     - same name and same arguments as parent
     - return type can be subclass of parent's return type
     - can't have a lower access modifier than the parent's method
     - private methods can't be overridden
-    - methods that are final cannot be overridden
+    - methods that are final or static cannot be overridden
 
 ### Static vs Instance methods<a name="classes-staticmethods"></a>
 
